@@ -27,9 +27,9 @@ export default function Navbar() {
   return<>
 
 <nav className='bg-slate-100 fixed z-50 right-0 left-0'>
-<div className='block  md:flex md:gap-4 xl-flex 2xl:flex justify-between items-center py-4 container'>
+<div className='block  md:flex md:gap-2 xl-flex 2xl:flex justify-between items-center py-4 container'>
 <div className='flex items-center justify-between '>
-<h1 className='xl:mr-8 aling-center' >
+<h1 className='mr-2 xl:mr-8 ' >
     <Link to='' >
         <img src={freashcardImage} alt='' className='w-full'></img>
     </Link>
@@ -41,31 +41,31 @@ export default function Navbar() {
 
   {token?
   
-  <div className='mr-20 md:flex justify-between items-center gap-10'>
-<ul className='block md:flex gap-4  my-4 xl:my-0 '>
+  <div className='md:flex justify-between items-center'>
+<ul className='block md:flex gap-4'>
    
-    <li className='mb-3'>
+    <li className=''>
         <NavLink className={({isActive})=>{
           return `before:h-[2px]  before:bg-primary relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full  before:transition-width before:duration-300
           hover:font-bold 
           ${isActive ? 'font-bold before:w-full' :""}`
         }}  to="" onClick={dispalynav}>Home</NavLink>
     </li>
-    <li className='mb-3'>
+    <li className=''>
         <NavLink className={({isActive})=>{
           return `before:h-[2px] before:bg-primary relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
           hover:font-bold before:duration-300
           ${isActive ? 'font-bold before:w-full' :""}`
         }} to="products" onClick={dispalynav}>Products</NavLink>
     </li>
-    <li className='mb-3'>
+    <li className=''>
         <NavLink className={({isActive})=>{
           return `before:h-[2px] before:bg-primary relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width] 
           hover:font-bold before:duration-300
           ${isActive ? 'font-bold before:w-full ' :""}`
         }} to="categorys" onClick={dispalynav}>Categories</NavLink>
     </li>
-    <li className='mb-3'>
+    <li className=''>
         <NavLink className={({isActive})=>{
           return `before:h-[2px]  before:bg-primary relative before:absolute before:left-0 before:-bottom-2 hover:before:w-full before:transition-[width]
           hover:font-bold before:duration-300
@@ -80,11 +80,11 @@ export default function Navbar() {
         }} to="allOrders" onClick={dispalynav}>Orders</NavLink>
     </li>
 </ul>
-<div><Link to="cart" className='ml-auto text-xl relative mr-6'  onClick={dispalynav}>
+<div className='flex justify-start items-center   md:ml-2'><Link to="cart" className='text-xl relative mr-6'  onClick={dispalynav}>
     <i className="fa-solid fa-cart-shopping "></i>
     <span className='bg-primary absolute top-0 right-0 w-5 h-5 flex items-center justify-center rounded-full text-xs translate-x-1/2 -translate-y-1/2 font-bold text-white'>{cartInfo === null ? <i className="fa-solid fa-spinner fa-spin"></i>: cartInfo.numOfCartItems || 0 }</span>
 </Link>
-<Link to="wishlist" className='ml-auto text-xl relative '  onClick={dispalynav}>
+<Link to="wishlist" className='text-xl relative '  onClick={dispalynav}>
 <i className="fa-solid fa-heart"></i>
 </Link></div>
 

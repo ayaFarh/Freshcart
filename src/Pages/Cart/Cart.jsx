@@ -17,15 +17,15 @@ export default function Cart() {
   :cartInfo.data.products.map((product)=>
   <section key={product._id}>
    <div className='grid grid-cols-12 gap-3 my-3'>
-<div className='col-span-1'>
+<div className='md:col-span-1 col-span-5'>
   <img src={product.product.imageCover} alt='' className='w-full'></img>
 </div>
-<div className='col-span-11'>
-<div className='flex justify-between items-center'>
+<div className='md:col-span-11 col-span-7'>
+<div className='md:flex justify-between items-center'>
   <div>
 <h3>{product.product.title}</h3>
 <h4 className='text-primary my-1'>price:{product.price} L.E</h4>
-<button className='btn-primary bg-red-600 uppercase ' onClick={()=>{removeItemsFromCart({id:product.product.id})}}><i className="fa-solid fa-trash"></i> remove</button>
+<button className='btn-primary bg-red-600 uppercase mb-4' onClick={()=>{removeItemsFromCart({id:product.product.id})}}><i className="fa-solid fa-trash"></i>remove</button>
   </div>
   <div className='flex items-center gap-4'>
     <button onClick={()=>{upduteItemsCart({id:product.product.id,count:product.count - 1})}} className='border-2 rounded p-1 border-primary hover:bg-primary transition-all duration-30'><i className="fa-solid fa-minus"></i></button>

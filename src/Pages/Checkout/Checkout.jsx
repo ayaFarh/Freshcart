@@ -72,7 +72,7 @@ const formik = useFormik({
 <input className=' form-control w-full' type='text' name='shippingAddress.city' placeholder='City' value={formik.values.shippingAddress.city} onChange={formik.handleChange}/>
 <input className='form-control w-full my-3' type='tel' name='shippingAddress.phone' placeholder='Phone' value={formik.values.shippingAddress.phone} onChange={formik.handleChange} />
 <textarea className='form-control w-full mb-3'  name='shippingAddress.details' placeholder='details' value={formik.values.shippingAddress.details} onChange={formik.handleChange}/>
-<button onClick={()=>{setordertype("cash")}} type='submit' className='btn-primary bg-blue-600 uppercase mr-2'>cash order</button>
+<button onClick={()=>{setordertype("cash")}} type='submit' className='btn-primary bg-blue-600 uppercase mr-2 mb-2'>cash order</button>
 <button onClick={()=>{setordertype("online")}} type='submit' className='btn-primary  uppercase'>online bayment</button>
   </form>
   
